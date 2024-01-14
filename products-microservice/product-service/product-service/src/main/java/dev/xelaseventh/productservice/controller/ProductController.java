@@ -5,12 +5,11 @@ import dev.xelaseventh.productservice.dto.ProductResponse;
 import dev.xelaseventh.productservice.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/api/product")
 @RequiredArgsConstructor
 public class ProductController {
