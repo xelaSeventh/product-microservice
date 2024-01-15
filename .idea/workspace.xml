@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e407625-1f0d-4fc5-bd56-3806810b5f70" name="Changes" comment="" />
+    <list default="true" id="1e407625-1f0d-4fc5-bd56-3806810b5f70" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/src/main/java/dev/xelaseventh/productservice/ProductServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/src/main/java/dev/xelaseventh/productservice/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/src/main/java/dev/xelaseventh/productservice/dto/ProductRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/src/main/java/dev/xelaseventh/productservice/dto/ProductResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/src/main/java/dev/xelaseventh/productservice/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/src/main/java/dev/xelaseventh/productservice/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/src/main/java/dev/xelaseventh/productservice/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-microservice/product-service/product-service/src/test/java/dev/xelaseventh/productservice/ProductServiceApplicationTests.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,15 +48,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tkill/Desktop/GitHub Proyects/Java/SpringBootMicroservices&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/tkill/Desktop/GitHub Proyects/Java/SpringBootMicroservices/microservices-parent",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="dev.xelaseventh.productservice.dto" />
