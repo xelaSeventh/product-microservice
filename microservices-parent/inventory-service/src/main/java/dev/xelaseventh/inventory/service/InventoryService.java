@@ -1,6 +1,6 @@
-package dev.xelaseventh.inventoryservice.service;
+package dev.xelaseventh.inventory.service;
 
-import dev.xelaseventh.inventoryservice.repository.InventoryRepository;
+import dev.xelaseventh.inventory.repository.InventoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,6 +13,6 @@ public class InventoryService {
 
     @Transactional(readOnly = true)
     public boolean isInStock(String skuCode) {
-        return inventoryRepository.findBySkuCode().isPresent();
+        return inventoryRepository.findBySkuCode(skuCode).isPresent();
     }
 }

@@ -1,6 +1,6 @@
-package dev.xelaseventh.inventoryservice.controller;
+package dev.xelaseventh.inventory.controller;
 
-import dev.xelaseventh.inventoryservice.service.InventoryService;
+import dev.xelaseventh.inventory.service.InventoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +12,7 @@ public class InventoryController {
 
     private final InventoryService inventoryService;
 
-    @GetMapping
+    @GetMapping("/{sku-code}")
     @ResponseStatus(HttpStatus.OK)
     public boolean isInStock(@PathVariable("sku-code") String skuCode){
         return inventoryService.isInStock(skuCode);

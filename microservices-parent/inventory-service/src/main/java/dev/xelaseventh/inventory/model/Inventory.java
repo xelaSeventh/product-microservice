@@ -1,4 +1,4 @@
-package dev.xelaseventh.inventoryservice.model;
+package dev.xelaseventh.inventory.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table
+@Table(name = "t_inventory")
 @Getter
 @Setter
 @AllArgsConstructor
