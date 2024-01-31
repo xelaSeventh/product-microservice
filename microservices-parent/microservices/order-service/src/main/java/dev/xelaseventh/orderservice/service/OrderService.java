@@ -1,5 +1,6 @@
 package dev.xelaseventh.orderservice.service;
 
+import dev.xelaseventh.orderservice.dto.InventoryResponse;
 import dev.xelaseventh.orderservice.dto.OrderLineItemsDto;
 import dev.xelaseventh.orderservice.dto.OrderRequest;
 import dev.xelaseventh.orderservice.model.Order;
@@ -8,7 +9,11 @@ import dev.xelaseventh.orderservice.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.reactive.function.client.WebClient;
+
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 @Service
@@ -17,6 +22,7 @@ import java.util.UUID;
 public class OrderService {
 
     private final OrderRepository orderRepository;
+    private final WebClient webClient;
 
     public void placeOrder(OrderRequest orderRequest){
 
@@ -30,7 +36,25 @@ public class OrderService {
 
         order.setOrderLineItemsList(orderLineItems);
 
-        orderRepository.save(order);
+        List<String> skuCodes = order.getOrderLineItemsList().stream()
+                .map(OrderLineItems::getSkuCode)
+                .toList();
+
+        InventoryResponse[] inventoryResponseArray = webClient.get()
+                        .uri("http://localhost:8082/api/inventory",
+                                uriBuilder -> uriBuilder.queryParam("skuCode", skuCodes).build())
+                        .retrieve()
+                        .bodyToMono(InventoryResponse[].class)
+                        .block();
+
+        boolean allProductsInStock = Arrays.stream(inventoryResponseArray)
+            .allMatch(InventoryResponse::isInStock);
+
+        if (allProductsInStock) {
+            orderRepository.save(order);
+        } else {
+            throw new IllegalArgumentException("Product is not in stock, please try again later.");
+        }
     }
 
     private OrderLineItems mapToDto(OrderLineItemsDto orderLineItemsDto) {
